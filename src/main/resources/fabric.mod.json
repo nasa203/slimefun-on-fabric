@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "slimefun-on-fabric",
+	"version": "${version}",
+	"name": "slimefun-on-fabric",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/slimefun-on-fabric/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.ice.Slimefunonfabric"
+		],
+		"client": [
+			"com.ice.client.SlimefunonfabricClient"
+		],
+		"fabric-datagen": [
+			"com.ice.client.SlimefunonfabricDataGenerator"
+		]
+	},
+	"mixins": [
+		"slimefun-on-fabric.mixins.json",
+		{
+			"config": "slimefun-on-fabric.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
